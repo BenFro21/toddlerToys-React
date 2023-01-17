@@ -2,10 +2,7 @@ import React from 'react'
 
 const toyPage = () => {
   return (
-    <div>
-
-        
-    </div>
+    <div>toyPage</div>
   )
 }
 

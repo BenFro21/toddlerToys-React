@@ -3,9 +3,9 @@ import Toy from '../../components/toy/Toy'
 
 const AllToyPage = ({toys, setToys}) => {
   return (
-(    toys.map(toy => {
-         return <Toy key={toy._id} toy={toy} /> 
-    }) )
+    toys.map(toy => {
+         return ( <div><Toy key={toy._id} toy={toy} /></div>) 
+    }) 
   )
 }
 

@@ -2,8 +2,8 @@ import './App.css';
 import { useState, useEffect } from 'react'
 import {Route, Routes} from 'react-router-dom'
 import Navbar from './components/navbar/Navbar';
-import AllToyPage from './pages/AllToyPage.jsx/AllToyPage';
-import NewToyPage from './pages/NewToyPage/NewToyPage'
+import AllToyPage from './pages/AllToyPage/AllToyPage';
+
 const backendUrl = 'http://localhost:8000/'
 
 function App() {
@@ -18,17 +18,15 @@ function App() {
   console.log(toys)
 
   return (
-    <div className="App">
-     <Navbar>
+    <>
+      <Navbar>
+
         <Routes >
-        
-        <Route path='/' element={<AllToyPage toys={toys} setToys={setToys} />} /> 
-        <Route path='/new' element={<NewToyPage />} /> 
-       
+          <Route path='/' element={<AllToyPage toys={toys} setToys={setToys} />} /> 
         </Routes>
-      </Navbar>
-   
-    </div>
+      </Navbar>        
+    </>
+
   );
 }
 

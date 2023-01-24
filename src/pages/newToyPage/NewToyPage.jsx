@@ -2,7 +2,7 @@ import React from 'react'
 
 const NewToyPage = () => {
   return (
-    <div><h1>HAHAJSASJDAJSDBASD</h1></div>
+    <div><h1>Im  the new Toy Page!</h1></div>
   )
 }
 

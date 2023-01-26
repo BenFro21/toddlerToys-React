@@ -1,8 +1,8 @@
 import React from 'react'
 
-const toyPage = () => {
+const toyPage = ({toys}) => {
   return (
-    <div>toyPage</div>
+    <div>Toy Details</div>
   )
 }
 

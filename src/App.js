@@ -4,6 +4,7 @@ import {Route, Routes} from 'react-router-dom'
 import Layout from './components/layout/Layout';
 import AllToyPage from './pages/AllToyPage/AllToyPage';
 import NewToyPage from './pages/newToyPage/NewToyPage';
+import ToyPage from './pages/ToyPage/ToyPage';
 
 const backendUrl = 'http://localhost:8000/'
 
@@ -27,6 +28,7 @@ function App() {
         <Routes >
           <Route path='/' element={<AllToyPage toys={toys} setToys={setToys} />} /> 
           <Route path='/new' element={<NewToyPage addToy={addToy} />} />
+          < Route path='/toys/:id' element={<ToyPage />} />
         </Routes>
       </Layout>
   );

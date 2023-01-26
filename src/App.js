@@ -1,7 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react'
 import {Route, Routes} from 'react-router-dom'
-import Navbar from './components/navbar/Navbar';
+import Layout from './components/layout/Layout';
 import AllToyPage from './pages/AllToyPage/AllToyPage';
 import NewToyPage from './pages/newToyPage/NewToyPage';
 
@@ -16,19 +16,19 @@ function App() {
     .then(toys => setToys(toys))
   }, [])
 
+  const addToy = (toy) => {
+    setToys([...toys, toy])
+  }
+
   console.log(toys)
 
   return (
-    <>
-      <Navbar>
-
+      <Layout>
         <Routes >
           <Route path='/' element={<AllToyPage toys={toys} setToys={setToys} />} /> 
-          <Route path='/new' element={<NewToyPage />} />
+          <Route path='/new' element={<NewToyPage addToy={addToy} />} />
         </Routes>
-      </Navbar>        
-    </>
-
+      </Layout>
   );
 }
 

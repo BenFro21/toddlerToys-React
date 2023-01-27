@@ -2,7 +2,9 @@ import React from 'react'
 
 const toyPage = ({toys}) => {
   return (
-    <div>Toy Details</div>
+    <div>
+      <h1>{toys.title}</h1>
+    </div>
   )
 }
 
